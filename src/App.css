@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgb(2, 2, 47);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-div{
+  height: 500px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+img{
+  height: 170px;
+  width: 185px;
+}
+.title-word {
+  animation: color-animation 4s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title-word-1 {
+  --color-1: #DF8453;
+  --color-2: #3D8DAE;
+  --color-3: #E4A9A8;
 }
+
+.title-word-2 {
+  --color-1: #DBAD4A;
+  --color-2: #ACCFCB;
+  --color-3: #19757b;
+}
+
+.title-word-3 {
+  --color-1: #ACCFCB;
+  --color-2: #E4A9A8;
+  --color-3: #ACCFCB;
+}
+
+.title-word-4 {
+  --color-1: #3D8DAE;
+  --color-2: #DF8453;
+  --color-3: #E4A9A8;
+}
+
+@keyframes color-animation {
+  0%    {color: var(--color-1)}
+  32%   {color: var(--color-1)}
+  33%   {color: var(--color-2)}
+  65%   {color: var(--color-2)}
+  66%   {color: var(--color-3)}
+  99%   {color: var(--color-3)}
+  100%  {color: var(--color-1)}
+}
+
+
+input{
+font-size: 14px;
+border-radius: 6px;
+line-height: 1.5;
+padding: 5px 10px;
+transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+border: 2px solid #dee1e2;
+color: rgb(14, 14, 16);
+background: #dee1e2;
+display: block;
+height: 36px;
+width: 90%;
+}
+input:hover {
+    border-color: #ccc;
+}
+input:focus{
+    border-color: #9147ff;
+    background: #fff;
+}
+
+.add{
+  position: absolute;
+  margin-top: -25px;
+  margin-left: 270px;
+}
+.showitems{
+  margin-top: 20px;
+}
+.eachitmes{
+border-radius: 6px;
+line-height: 1.5;
+padding: 5px 10px;
+transition: box-shadow 100ms ease-in, border 100ms ease-in, background-color 100ms ease-in;
+border: 2px solid #dee1e2;
+color: rgb(14, 18, 19);
+background: #eaf0ef;
+display: block;
+height: 36px;
+width: 90%;
+display: flex;
+align-items: center;
+margin-top: 10px;
+}
+.eachitmes:hover {
+  background-color:rgb(205, 179, 95) ;
+}
+.eachitmes:focus{
+  border-color: #aa9cbf;
+}
+.delet{
+  position: absolute;
+  margin-left: 260px;
+}
+button {
+  border: none;
+  padding: 3px 25px;
+  font-size: 44px;
+  position: relative;
+  background: transparent;
+  color: #ffa500;
+  text-transform: uppercase;
+  border: 3px solid #ffa500;
+  cursor: pointer;
+  transition: all 0.7s;
+  overflow: hidden;
+  border-radius: 100px;
+}
+button::after {
+  content: "Check List";
+  }
+button:hover {
+  color: #000;
+}
+span {
+  transition: all 0.7s;
+  z-index: -1;
+}
+
+button .first {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  background: #ffa500;
+}
+
+button:hover .first {
+  top: 0;
+  right: 0;
+}
+button .second {
+  content: "";
+  position: absolute;
+  left: 25%;
+  top: -100%;
+  height: 100%;
+  width: 25%;
+  background: #ffa500;
+}
+
+button:hover .second {
+  top: 0;
+  left: 50%;
+}
+
+button .third {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  top: 100%;
+  width: 25%;
+  background: #ffa500;
+}
+
+button:hover .third {
+  top: 0;
+  left: 25%;
+}
+
+button .fourth {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  background: #ffa500;
+}
+
+button:hover .fourth {
+  top: 0;
+  left: 0;
+}
+
+button:hover::after {
+  content: "Remove All";
+  font-size: 41px;
+ }
+.edit{
+  position: absolute;
+  margin-left: 230px;
+}
+ .editagain{
+  position: absolute;
+  margin-left: 260px;
+  margin-top: -25px;
+ }
